@@ -9,23 +9,10 @@ between standard dynamic range (SDR) and high dynamic range (HDR) data, as  desc
 
 <i> Andrei Chubarau, Hyunjin Yoo, Tara Akhavan, James Clark. 
 Adapting Pretrained Networks for Image Quality Assessment on High Dynamic Range Displays, 2024.
-<a href="https://arxiv.org/abs/2405.00670">Arxiv link (doi TBD)</a>.
+<a href="https://arxiv.org/abs/2405.00670">Arxiv link</a>. (in print at HVEI 2024; doi TBD)
 </i>
 
-We evaluate our proposed training recipe with DA using two Full-Reference IQA models, namely PieAPP [1] and VTAMIQ [2]. 
-
-Full citation coming soon (paper in print):
-Temporary
-```
-@article{adaptingSdrModelsToHdr,
-  title = {Adapting Pretrained Networks for Image Quality Assessment on High Dynamic Range Displays},
-  author = {Chubarau, Andrei and Yoo, Hyunjin, Akhavan, Tara and Clark, James},
-  journal = {Electronic Imaging},
-  year = {2024},
-  url = {TBD}
-  doi = {TBD}
-}
-```
+We evaluate our proposed training recipe with DA using two Full-Reference IQA models, namely PieAPP [1] and VTAMIQ [2].
 
 ## Paper Abstract
 
@@ -127,3 +114,7 @@ In Computer Vision – ECCV 2016 Workshops, pages 443–450, Cham, 2016. Springe
 
 [4] R. K. Mantiuk and M. Azimi. PU21: A novel perceptually uniform encoding for adapting existing quality metrics for 
 hdr. In 2021 Picture Coding Symposium (PCS), pages 1–5, 2021.
+=======
+# HDR-IQA-dom-adapt
+
+More details and source code will be shared after HVEI2024 conference (late February 2024).
