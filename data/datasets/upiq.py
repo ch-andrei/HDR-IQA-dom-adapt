@@ -21,7 +21,7 @@ class UPIQDataset(PatchFRIQADataset):
 
     # equivalence between reference images in LIVE and TID datasets; -1 indicates that image is only in LIVE
     # 10 out of 29 ref images in LIVE are unique (not in TID)
-    # maps images numbers from LIVE to TID (ex: "1: 5" means that LIVE image "i01.png" maps to "i05.png" in TID)
+    # maps image numbers from LIVE to TID (ex: "1: 5" means that LIVE image "i01.png" maps to "i05.png" in TID)
     LIVE_TID_EQUIVALENT = {
         1: 5,
         2: -1,
@@ -220,7 +220,7 @@ class UPIQSDRDataset(UPIQDataset):
     ]
 
     # TID2013 25 + LIVE 10 (10 out of 29 are unique)
-    num_ref_images = (25+10)  # 30 total
+    num_ref_images = (25+10)  # 35 total
 
     def __init__(self, **kwargs):
         super().__init__(

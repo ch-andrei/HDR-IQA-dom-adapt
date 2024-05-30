@@ -105,7 +105,7 @@ for instance, 10000 cd/m2 is mapped to the same value as the maximum value of an
 With _255_ normalization, PU units max exceed the expected min/max range, but luminance of 100 cd/m2 is mapped to
 the same value as the maximum value of an sRGB image.
 
-The benefit of _Pmax_ normalization is that ensures that a model operates on values necessarily seen during
+The benefit of _Pmax_ normalization is that it ensures that a model operates on values necessarily seen during
 pre-training: it brute forces all possible PU-encoded values (and consequently luminance) to the range used
 in pre-training.
 
@@ -117,7 +117,7 @@ ambiguous predictions.
 
 As described in our paper, we empirically find that _Pmax_ normalization consistently outperforms _255_, both with and
 without domain adaptation. Our initial motivation was that PU-encoded values with _255_ normalization more faithfully
-reproduce physical luminance levels relative to sRGB data used in pre-training, and that the degradation in performance
+reproduces physical luminance levels relative to sRGB data used in pre-training, and that the degradation in performance
 on HDR data can be addressed with domain adaptation, but our final results do not support this hypothesis. Simply
 aligning the full range of PU values with pre-training data leads to better prediction accuracy.
 

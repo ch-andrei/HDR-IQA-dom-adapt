@@ -253,7 +253,7 @@ def run_cross_val_da(da_type, model_name, model_checkpoint, coral_weight, normal
 
     global_config["optimizer_learning_rate"] = 0.0001 if model_checkpoint is None else 0.00005
     global_config["scheduler_type"] = "lambda"
-    global_config["scheduler_step_per_batch"] = True
+    global_config["scheduler_step_per_batch"] = True  # TODO is this actually needed?
 
     global_config["num_repeats_test"] = 4  # average over N runs for the test set (~ensemble)
 
@@ -274,7 +274,7 @@ def run_cross_val_da(da_type, model_name, model_checkpoint, coral_weight, normal
         domain_adaptation_config["dataset_source"] = DATASET_KADID10K  # source
         domain_adaptation_config['num_repeats_target'] = 8
         domain_adaptation_config["source_use_full_split"] = True  # use the entire dataset for source
-        global_config["num_epochs"] = 30 if model_checkpoint else 15
+        global_config["num_epochs"] = 30 if model_checkpoint is None else 15
 
     # UNLABELED HDR AND LABELED HDR-like
     elif da_type in [DA_TYPE_S_HU_SIHDR, DA_TYPE_S_HU_KADID, DA_TYPE_S_HU_UPIQS, DA_TYPE_S_HS]:
